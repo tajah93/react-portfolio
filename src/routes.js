@@ -1,5 +1,5 @@
 import React from "react";
-import {IndexRoute, Router, Route} from "react-router"; 
+import { Router, Route } from "react-router";
 import Main from "./components/Main";
 import Summary from "./components/Summary";
 import Photo from "./components/Photo";
@@ -12,14 +12,16 @@ import Project from "./components/Project";
 
 
 export default (
-  <Route path='/' component= {Main}>
-    <IndexRoute component= {Summary} />
-    <Route path='/photo' component= {Photo} />
-    <Route path='/contact' component= {Contact} />
-    <Route path='/form' component= {Form} />
-    <Route path='/portfolio' component= {Portfolio} />
-    <Route path='/resume' component= {Resume} />
-    <Route path='/media' component= {Media} />
-    <Route path='/project' component= {Project} />
-  </Route>
+  <Router>
+    <Route path='/' component={Main}>
+      <Route exact path= "/" component={Summary} />
+      <Route path='/Photo' component={Photo} />
+      <Route path='/Contact' component={Contact} />
+      <Route path='/Form' component={Form} />
+      <Route path='/Portfolio' component={Portfolio} />
+      <Route path='/Resume' component={Resume} />
+      <Route path='/Media' component={Media} />
+      <Route path='/Project' component={Project} />
+    </Route>
+  </Router>
 )
