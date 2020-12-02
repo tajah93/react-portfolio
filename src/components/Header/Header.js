@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Link} from "react-router-dom";
 import "./Header.css";
-import {Link} from "react-router";
 
-Nav = Link
 
-class Header extends Component {
-    render() {
+function Header() {
+   
         return (
-            <Header className="navbar navbar-expand-lg navbar-light bg-light">
-                <Nav>Tajah Johnson</Nav>
-                <Nav to= "/">About Me</Nav>
-                <Nav to= "/contact">Contact</Nav>
-                <Nav to= "/portfolio">Portfolio</Nav>
-            </Header>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <p>Tajah Johnson</p>
+                <Link to= "/">About Me</Link>
+                <Link to= "/contact">Contact</Link>
+                <Link to= "/portfolio">Portfolio</Link>
+            </nav>
         )
-    }
+    
 }
 
 export default Header; 
